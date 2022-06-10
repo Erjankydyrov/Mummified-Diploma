@@ -1,0 +1,24 @@
+.Toolbar {
+  background-color: #272727;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.Toolbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (max-width: 620px) {
+  .Toolbar ul {
+    display: none;
+  }
+} 

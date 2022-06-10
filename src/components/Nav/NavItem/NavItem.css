@@ -1,0 +1,65 @@
+.NavItem {
+  margin-left: 15px;
+}
+.NavItem a {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  color: #949494;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+.NavItem a:before,
+.NavItem a:after {
+  content: "";
+  position: absolute;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+.NavItem a:before {
+  top: 0;
+  left: 10px;
+  border-radius: 15px;
+  width: 20px;
+  height: 3px;
+}
+
+.NavItem a:after {
+  bottom: 0px;
+  right: 10px;
+  border-radius: 15px;
+  width: 20px;
+  height: 3.5px;
+}
+
+.NavItem a:before {
+  background-color: rgb(255, 215, 0);
+}
+
+.NavItem a:after {
+  background-color: rgb(192, 192, 192);
+}
+
+.NavItem a.active::before,
+.NavItem a.active::after {
+  transform: scale(1);
+}
+.NavItem a:hover {
+  color: rgb(233, 181, 84);
+}
+.NavItem a.active {
+  color: rgb(233, 181, 84);
+}
+.NavItem a:hover:before,
+.NavItem a:hover:after {
+  transform: scale(1);
+}
+
+@media (max-width: 620px) {
+  .NavItem a:before,
+  .NavItem a:after {
+    display: none;
+  }
+}

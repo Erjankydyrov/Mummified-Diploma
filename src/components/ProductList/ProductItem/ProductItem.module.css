@@ -1,0 +1,85 @@
+.ProductItem {
+  position: relative;
+  margin: 1rem 0.5rem;
+
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.ProductItemImage {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+.ProductItemImage:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.ProductItemImage:hover img {
+  transform: scale(1.15);
+}
+.ProductItemImage img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.25s;
+  padding-top: 20px;
+}
+.ProductItemImage .ProductItemText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #272727;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.ProductItemImage .ProductItemText h3 {
+  margin: 0;
+  padding: 0;
+}
+.ProductItemImage .ProductItemText p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+.ProductItemImage .ProductItemText .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #efc11e 0%, #ffe253 100%);
+  border: none;
+  border-radius: 5px;
+  color: rgb(20, 20, 20);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.ribbon {
+  position: absolute;
+  right: 10px;
+  top: -3px;
+  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.5));
+}
+.ribbon > .content {
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 400;
+  background: linear-gradient(to right, #efc11e 0%, #ffe253 100%);
+  padding: 10px 3px 15px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), 50% 100%, 0 calc(100% - 8px));
+  width: 50px;
+  min-height: 36px;
+}
